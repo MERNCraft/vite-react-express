@@ -59,13 +59,28 @@ const checkPass = (req, res, next) => {
     jwt.verify(pass, JWT_SECRET, treatPass)
   }
 
+  // function treatPass(error, payload) {
+  //   console.log("payload:", payload)
+  //   const regex = new RegExp(payload)
+
+  //   const sendHome = 
+  //      error                // the JWT token was invalid
+  //   || !regex.test(referer) // referer undefined or invalid
+
+  //   if (sendHome) {
+  //     // Ignore API request: respond with index.html file 
+  //     return res.sendFile(index)
+  //   }
+
+  //   proceed() // with API request
+  // }
   function treatPass(error, payload) {
     console.log("payload:", payload)
-    const regex = new RegExp(payload)
 
     const sendHome = 
-       error                // the JWT token was invalid
-    || !regex.test(referer) // referer undefined or invalid
+       error    // the JWT token was invalid
+    || !referer // the request did not come from a page
+    || referer && !referer.startsWith(payload) // invalid referer
 
     if (sendHome) {
       // Ignore API request: respond with index.html file 

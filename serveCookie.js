@@ -10,16 +10,18 @@ const serveCookie = (req, res, next) => {
   
   if ( path === "/" || path === "index.html" ) {
      // The request is for the static index.html page at the origin
-    //  const protocol = req.protocol
+     const protocol = req.protocol
      const host = req.headers.host // includes the port
-     const regex = `^https?:\/\/${host}/`
-    //  const origin = `${protocol}://${host}/`
-    //  console.log("origin:", origin)
+    //  const regex = `^https?:\/\/${host}/`
+     const origin = `${protocol}://${host}/`
+     console.log("origin:", origin)
 
-    console.log("regex:", regex)
+    //  console.log("regex:", regex)
+     console.log("origin:", origin)
     
     // Create a token to record the origin that was requested...
-    const pass = getToken(regex)
+    // const pass = getToken(regex)
+    const pass = getToken(origin)
     // ... and serve it as session cookie.
     req.session.pass = pass
 
