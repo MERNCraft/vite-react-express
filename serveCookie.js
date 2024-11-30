@@ -7,6 +7,7 @@ const { getToken } = require('./jwToken')
 
 const serveCookie = (req, res, next) => {
   const { path } = req
+  // console.log("serveCookie path:", path)
   
   if ( path === "/" || path === "index.html" ) {
      // The request is for the static index.html page at the origin
@@ -17,7 +18,6 @@ const serveCookie = (req, res, next) => {
      console.log("origin:", origin)
 
     //  console.log("regex:", regex)
-     console.log("origin:", origin)
     
     // Create a token to record the origin that was requested...
     // const pass = getToken(regex)

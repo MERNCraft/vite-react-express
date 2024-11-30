@@ -83,7 +83,8 @@ const checkPass = (req, res, next) => {
     || referer && !referer.startsWith(payload) // invalid referer
 
     if (sendHome) {
-      // Ignore API request: respond with index.html file 
+      // Ignore API request: respond with index.html file
+      console.log("sendHome:", sendHome)
       return res.sendFile(index)
     }
 
