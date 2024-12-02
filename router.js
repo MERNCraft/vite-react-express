@@ -29,7 +29,7 @@ ip      ${ip}
 for     ${protocol}://${host}${path}
 at      ${Date()}`
 
-  console.log(message);
+  // console.log(message);
 
   if (res) {
     res.send(`<pre>${message}</pre>`)

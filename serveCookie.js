@@ -12,8 +12,6 @@ const serveCookie = (req, res, next) => {
     // The request is for the static index.html page at the origin
     const host = req.headers.host // includes the port
     const regex = `^https?:\/\/${host}/`
-
-    console.log("regex:", regex)
     
     // Create a token to record the origin that was requested...
     const pass = getToken(regex)

@@ -7,7 +7,7 @@ const { join } = require('path')
 const index = join(__dirname, 'public/index.html')
 
 const jwt = require("jsonwebtoken")
-const JWT_SECRET = process.env.JWT_SECRET
+const JWT_SECRET = process.env.JWT_SECRET || "secret needed"
 const is_dev = process.env.IS_DEV === "true"
 
 
@@ -39,7 +39,6 @@ const getToken = ( payload, options = {} ) => {
 const checkPass = (req, res, next) => {
   const pass = req.session?.pass
   const referer = req.headers.referer
-  console.log("referer:", referer, ", req.path:", req.path)
 
   let status = 0
   let message = ""
@@ -60,7 +59,6 @@ const checkPass = (req, res, next) => {
   }
 
   function treatPass(error, payload) {
-    console.log("payload:", payload)
     const regex = new RegExp(payload)
 
     const sendHome = 
