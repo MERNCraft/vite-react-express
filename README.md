@@ -1,19 +1,13 @@
-# Vite-React-Express #
+# How to Serve a React Frontend with Express #
 
-To create your own content, edit the file at `docs/md/99-Intro.md` and add more `.md` files in the `docs/md/` folder
-```
-.
-├── README.md
-├── docs
-│   ├── images
-│   ├── index.html
-│   └── md
-│       ├── 99-Intro.md
-│       └── images -> ../images
-├── package.json
-└── public -> ../MERNCraft/public
-```
+[Full tutorial](https://merncraft.github.io/Vite-React-Express)
 
-Visit [the HTM-Elves Organization site](https://HTM-Elves.github.io) for tutorials on how to work with the HTM-Elves workflow.
+When creating a web site using the MERN stack (MongoDB, Express, React and NodeJS), you might use:
 
-Replace the contents of this README.md file with a summary of the tutorial that you are writing.
+1. Vite to develop your frontend
+2. Express to develop your backend
+3. A hosting site such as Render.com to host your frontend and backend separately.
+
+Having the frontend run from a different origin URL than the backend means that you will have to deal with CORS issues (Cross-Origin Resource Sharing).
+
+This project shouws you how to build a workflow to use your Express backend to serve the files for your React frontend.
