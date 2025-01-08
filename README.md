@@ -1,6 +1,6 @@
 # How to Serve a React Frontend with Express #
 
-[Full tutorial](https://merncraft.github.io/Vite-React-Express)
+[Full tutorial](https://merncraft.github.io/vite-react-express/)
 
 When creating a web site using the MERN stack (MongoDB, Express, React and NodeJS), you might use:
 

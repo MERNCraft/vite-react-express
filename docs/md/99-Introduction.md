@@ -3,7 +3,7 @@ title: How to Serve a React Frontend with Express
 subtitle: Deploying frontend and backend as a single Web Service
 month: January 2025
 organization: MERNCraft
-repo: Vite-React-Express
+repo: vite-react-express
 ---
 
 <!-- Introduction -->
