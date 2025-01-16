@@ -58,7 +58,7 @@ What you want to do is run a single command in the Terminal when it is active in
    
 4. Edit the current `"publish"` script to run the `"build"` script first and then the `publish.sh` script.
 
-<details class="solution" open>
+<details class="hint" open>
 <summary>Hint</summary>
 Earlier you ran `npm i && npm run dev` to install all the Vite dependencies and then start the Vite development server. As you may recall, the `&&` operator ensures that the first process is completed successfully before the second process starts.
 
