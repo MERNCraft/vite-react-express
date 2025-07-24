@@ -4,11 +4,12 @@ Proof-of-concept of a Vite React site served by an Express Backend.
 
 This `backend/` directory contains the following files:
 
+```md
 ├── This `README.md` file
 │
 ├── LICENSE
 │
-├── .env               (which you must create yourself)
+├── .env               (which you should create yourself)
 ├── .git
 ├── .gitignore
 │
@@ -35,6 +36,7 @@ This `backend/` directory contains the following files:
 │
 ├── package-lock.json
 └── package.json
+```
 
 ## HOUSEKEEPING
 
@@ -44,11 +46,13 @@ This `backend/` directory contains the following files:
 
 During development, this `backend/` folder should be inside a parent folder containing the following contents:
 
+```md
 .
 ├── backend/
 ├── frontend/
 ├── package.json
 └── publish.sh
+```
 
 You will create your React frontend in the `frontend/` folder, and then run `npm run publish` to copy the static files produces by `vite build` into the `backend/public/` folder.
 
