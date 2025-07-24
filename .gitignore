@@ -8,3 +8,9 @@ Icon?
 public
 docs/md/images
 Notes/
+
+
+!Project/frontend/.env
+!Project/frontend/public
+!Project/backend/.env
+!Project/backend/public
